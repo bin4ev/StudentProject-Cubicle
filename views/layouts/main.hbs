@@ -1,0 +1,33 @@
+<div class="container">
+    <header>
+        <ul>
+            <li><img class="logo" src="/images/logo.png"></li>
+            <li><a href="/">Browse</a></li>
+            <li><a href="/about">About</a></li>
+            {{#if isAuthentication}}
+            <li><a href="/create">Add a Cube</a></li>
+            <li><a href="/accessory/create">Add Accessory</a></li>
+            <li><a href="/user/logout">Logout</a></li>
+            {{else}}
+            <li><a href="/user/login">Login</a></li>
+            <li><a href="/user/register">Register</a></li>
+            {{/if}}
+            
+
+
+        </ul>
+    </header>
+    {{#if error}}
+</div>
+<div id="notifications">
+    <p id="notification message"> {{error.message}}</p>
+</div>
+{{/if}}
+{{{body}}}
+
+
+
+
+
+
+<footer>@Cubicle: Exercise for Express.js , Handlebars , Mongoose</footer>
