@@ -22,16 +22,25 @@ router.post('/create', (req, res) => {
 })
 
 router.get('/attach/:id', async (req,res)=>{
-  
+  try {
     let cube = await productService.getOne(req.params.id)
     let accessories = await accessoryService.getAll()
    
     res.render('attachAccessory', { title: 'attach',cube ,accessories})
+  } catch (error) {
+      console.log(error);
+  }
+
 })
 
 router.post('/attach/:id', (req,res)=>{
- accessoryService.attachAccessory(req.params.id,req.body.accessory)
- res.redirect(302,`/details/${req.params.id}`)
+    try {
+        accessoryService.attachAccessory(req.params.id,req.body.accessory)
+        res.redirect(302,`/details/${req.params.id}`)
+    } catch (error) {
+        console.log(error);
+    }
+
 
 })
 
