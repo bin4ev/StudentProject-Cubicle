@@ -6,13 +6,13 @@ id: mongoose.Types.ObjectId,
 username:{
     type:String,
     required: [true, 'Username is required'],
-    minLength:5,
+    minLength:3,
     match: ENGLISH_LETTERS_PATERN ,
   
 
 },
 password:{
-    type:String,
+    type: String,
     required: [true, 'Password is required'],
     minLength:6,
 
