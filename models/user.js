@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const ENGLISH_LETTERS_PATERN = /^[a-zA-z0-9]+$/
+const ENGLISH_LETTERS_PATERN = /^[a-zA-Z0-9]+$/
 
 const  userSchema = new mongoose.Schema({
 id: mongoose.Types.ObjectId,
