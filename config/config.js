@@ -9,7 +9,7 @@ const config ={
     },
     production:{
         PORT: 80,
-         DB_CONNEECTION :'insert mongodb atlas connection here' ,
+         DB_CONNEECTION :'mongodb+srv://bin4ev123:bin4ev321@cluster0.ge2kj.mongodb.net/test?authSource=admin&replicaSet=atlas-mmqq09-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
          SALT_ROUND: 10,
          SECRET: 'javascript is cool',
          COOCKIE_NAME:'USER_SESSION'
