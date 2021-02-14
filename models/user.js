@@ -5,7 +5,7 @@ const  userSchema = new mongoose.Schema({
 id: mongoose.Types.ObjectId,
 username:{
     type:String,
-    required: [true, 'Username is required'],
+    required: [true, 'Username is required !'],
     minLength:3,
     match: ENGLISH_LETTERS_PATERN ,
   
@@ -13,7 +13,7 @@ username:{
 },
 password:{
     type: String,
-    required: [true, 'Password is required'],
+    required: [true, 'Password is required !'],
     minLength:6,
 
 }
